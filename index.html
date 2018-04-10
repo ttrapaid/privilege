@@ -129,12 +129,13 @@
 
             });
             
-               function httpGet(theUrl){
+           function httpGet(theUrl){
                 var xmlHttp = new XMLHttpRequest();
                 xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
                 xmlHttp.send( null );
                 return xmlHttp.responseText;
-            }
+            };
+            
             function abbrState(input, to){
                 var states = [
                     ['Arizona', 'AZ'],
@@ -190,6 +191,7 @@
                     ['Wisconsin', 'WI'],
                     ['Wyoming', 'WY'],
                 ];
+                
                 if (to == 'abbr'){
                     input = input.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
                     for(i = 0; i < states.length; i++){
