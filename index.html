@@ -235,6 +235,12 @@
             </iframe>
         </div>
         <div id="testingDiv"></div>
+        <script>
+-            var charityState = "MD";
+-            var charityUrl = "https://api.data.charitynavigator.org/v2/Organizations?app_id=ecaf79d5&app_key=3fbd8a6d55aed6a0173ba43ec3f16d25&state=" + charityState;
+-            var charityContent = httpGet(charityUrl);
+-            document.getElementById("testingDiv").innerHTML = charityState + " " + charityContent;
+-        </script>
     </body>
 
 </html>
